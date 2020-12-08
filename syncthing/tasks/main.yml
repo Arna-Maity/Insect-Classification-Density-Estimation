@@ -1,0 +1,6 @@
+---
+# tasks file for syncthing
+- include: addrepo.yml
+- include: install.yml
+- include: configure.yml
+- include: service.yml 

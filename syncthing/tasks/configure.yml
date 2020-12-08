@@ -1,0 +1,22 @@
+---
+# Configure syncthing systemd unit
+- name: Copy syncthing systemd unit to proper location.
+  become: yes
+  copy:
+    src: syncthing@.service
+    dest: '{{ systemd_loc }}'
+  
+- name: Configure proper ownership & group of unit.
+  become: yes
+  file:
+    path: '{{ systemd_loc }}'
+    owner: root
+    group: root
+
+- name: Enable & start the systemd unit.
+  become: yes
+  systemd:
+    name: 'syncthing@{{ ansible_ssh_user }}'
+    daemon_reload: yes
+    state: started
+    enabled: yes

@@ -1,0 +1,30 @@
+---
+# tasks file for setup_python_packages
+- name: Install gpiozero package
+  become: yes
+  apt:
+    name: python3-gpiozero
+    state: latest
+    update_cache: yes
+
+- name: Install RPi.GPIO package
+  become: yes
+  apt:
+    name: python3-rpi.gpio
+    state: latest
+    update_cache: yes
+
+- name: Install picamera package
+  become: yes
+  apt:
+    name: python3-picamera
+    state: latest
+    update_cache: yes
+
+- name: Install numpy package
+  become: yes
+  apt: 
+    name: python3-numpy
+    state: latest
+    update_cache: yes
+

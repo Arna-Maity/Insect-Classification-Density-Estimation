@@ -1,0 +1,9 @@
+---
+# Top-level playbook to setup Pis for Image Aquisition
+- name: Setup Image Aquisition Pis
+  hosts: imagecollectors
+  remote_user: root
+
+  roles:
+    - syncthing
+    - setup_python_packages

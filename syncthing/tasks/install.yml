@@ -1,0 +1,8 @@
+---
+# Update cache & install Syncthing
+- name: Install Syncthing
+  become: yes
+  apt:
+    name: syncthing
+    state: latest
+    update_cache: yes

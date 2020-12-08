@@ -1,0 +1,4 @@
+---
+# defaults file for syncthing
+pref_loc: /etc/apt/preferences.d/syncthing
+systemd_loc: /etc/systemd/system/syncthing@.service
