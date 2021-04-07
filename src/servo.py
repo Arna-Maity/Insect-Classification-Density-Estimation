@@ -40,13 +40,13 @@ time.sleep(0.5) """
 if i < 4:
   for j in range(2,8,1):
     p1.ChangeDutyCycle(j)
-    time.sleep(0.1)
+    time.sleep(0.07)
 
   time.sleep(0.9)
 
   for j in range(2,8,1):
     p2.ChangeDutyCycle(j)
-    time.sleep(0.1)
+    time.sleep(0.07)
 
   with open(os.path.dirname(os.path.abspath(__file__)) + '/ldc','wb') as f:
     pickle.dump(j,f)
@@ -54,13 +54,13 @@ if i < 4:
 else:
   for j in range(7,1,-1):
     p1.ChangeDutyCycle(j)
-    time.sleep(0.1)
+    time.sleep(0.07)
 
   time.sleep(0.9)
 
   for j in range(7,1,-1):
     p2.ChangeDutyCycle(j)
-    time.sleep(0.1)
+    time.sleep(0.07)
 
   with open(os.path.dirname(os.path.abspath(__file__)) + '/ldc','wb') as f:
     pickle.dump(j,f)
