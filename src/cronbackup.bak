@@ -22,6 +22,7 @@
 # 
 # m h  dom mon dow   command
 * * * * * python3 /home/pi/Insect-Classification-Density-Estimation/src/camera.py
-* * * * * python3 /home/pi/Insect-Classification-Density-Estimation/src/servo.py
+#* * * * * python3 /home/pi/Insect-Classification-Density-Estimation/src/servo.py
 * * * * * python3 /home/pi/Insect-Classification-Density-Estimation/src/LED.py
 @reboot syncthing
+@reboot python3 /home/pi/Insect-Classification-Density-Estimation/src/servo2.py
